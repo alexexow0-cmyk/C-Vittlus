@@ -1,36 +1,36 @@
 # C-Vittlus
 
-Sitio web personal/profesional de C-Vittlus.
+Sitio web comercial estático para una marca de galletas artesanales premium.
 
 ## Descripción
 
-Proyecto web automatizado para gestión de contenido y actualizaciones.
-
-## Características
-
-- Sitio web responsivo
-- Fácil de mantener y actualizar
-- Preparado para automatización con IA
-- Compatible con GitHub Pages
+La web presenta una identidad visual más profesional, una narrativa marca y un catálogo de productos con gestión de stock dinámico. La experiencia está optimizada para escritorio, tablet y móvil.
 
 ## Estructura
 
 ```text
 C-Vittlus/
 ├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── main.js
+│   ├── products.js
+│   └── chatbot.js
 ├── README.md
-├── .gitignore
-├── .github/
-│   └── workflows/
-│       └── pages.yml
-└── assets/
+└── .github/
+    └── workflows/
+        └── static.yml
 ```
 
-## Enlace público
+## Cómo funciona
 
-- Repositorio: https://github.com/alexexow0-cmyk/C-Vittlus
-- Web: https://alexexow0-cmyk.github.io/C-Vittlus/
+- `index.html`: estructura completa de la página y secciones clave.
+- `css/styles.css`: diseño visual, responsive y estilos del chatbot.
+- `js/products.js`: catálogo de productos con gestión automática de stock y estados.
+- `js/chatbot.js`: asistente para responder sobre productos, stock, novedades e historia.
+- `js/main.js`: menú móvil, año dinámico y envío del formulario.
 
-## Notas
+## Requisito
 
-Este proyecto está listo para que una IA o un agente pueda editar archivos, mantener contenido y desplegar cambios de forma automatizada.
+Se despliega con GitHub Pages mediante la GitHub Action existente.

@@ -1,72 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C-Vittlus</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            max-width: 600px;
-            text-align: center;
-        }
-        
-        h1 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        
-        p {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: #764ba2;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>C-Vittlus</h1>
-        <p>¡Bienvenido a mi página web!</p>
-        <p>Esta es tu página principal. Personalízala según tus necesidades.</p>
-        <a class="btn" href="https://alexexow0-cmyk.github.io/C-Vittlus/" target="_blank" rel="noopener noreferrer">Comenzar</a>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="C-Vittlus ofrece galletas artesanales premium, de elaboración cuidadosa y sabor auténtico."
+    />
+    <title>C-Vittlus | Galletas artesanales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a href="#inicio" class="brand" aria-label="C-Vittlus inicio">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">C-Vittlus</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#historia">Nuestra historia</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Galletas artesanales premium</p>
+            <h1>Una experiencia dulce con esencia tradicional.</h1>
+            <p class="hero-description">
+              En C-Vittlus combinamos recetas de siempre con ingredientes de primera calidad para crear galletas que convierten cada momento en un pequeño ritual.
+            </p>
+            <div class="hero-actions">
+              <a href="#productos" class="btn btn-primary">Ver colección</a>
+              <a href="#historia" class="btn btn-secondary">Nuestra historia</a>
+            </div>
+            <ul class="hero-points" aria-label="Valores de la marca">
+              <li>Ingredientes naturales</li>
+              <li>Elaboración artesanal</li>
+              <li>Frescura garantizada</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Galletas de C-Vittlus">
+            <div class="cookie-card cookie-card-large">
+              <div class="cookie-image cookie-vanilla"></div>
+              <div class="cookie-info">
+                <span class="mini-badge">Más vendida</span>
+                <h3>Cookies Clásicas</h3>
+                <p>Textura suave y sabor auténtico.</p>
+              </div>
+            </div>
+            <div class="cookie-card cookie-card-small">
+              <div class="cookie-image cookie-choco"></div>
+              <div class="cookie-info">
+                <span class="mini-badge alt">Novedad</span>
+                <h3>Chocolate intenso</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="productos" class="catalog">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Nuestra selección</p>
+            <h2>Galletas que cumplen cada antojo.</h2>
+          </div>
+          <div id="productsGrid" class="product-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="historia" class="story">
+        <div class="container story-grid">
+          <div class="story-copy">
+            <p class="eyebrow">Sobre nosotros</p>
+            <h2>Una marca nacida del placer de cocinar bien.</h2>
+            <p>
+              C-Vittlus nació de una pasión por la repostería artesanal y por la idea de que una galleta puede convertirse en una experiencia memorable. Empezamos con la intención de ofrecer algo más que un producto dulce: queríamos crear un sabor auténtico, una textura cuidada y una sensación de hogar en cada bocado.
+            </p>
+            <p>
+              A lo largo del tiempo, hemos perfeccionado nuestras recetas con paciencia y criterio, combinando tradición, calidad y un enfoque muy cuidado en cada detalle. Elegimos ingredientes naturales, trabajamos en lotes pequeños y nos tomamos el tiempo necesario para que cada masa, cada horneado y cada presentación reflejen nuestro estándar.
+            </p>
+            <p>
+              Hoy C-Vittlus sigue creciendo con la misma intención de origen: cocinar con cariño, cuidar la materia prima y ofrecer productos que se disfrutan con calma. Nuestra historia es la de una marca que entiende que los detalles hacen la diferencia y que la verdadera calidad se reconoce en el sabor, en la consistencia y en la atención que ponemos en cada receta.
+            </p>
+          </div>
+
+          <div class="story-panel" aria-label="Valores de C-Vittlus">
+            <div class="panel-item">
+              <strong>Tradición</strong>
+              <span>Recetas revisadas y pensadas para durar.</span>
+            </div>
+            <div class="panel-item">
+              <strong>Calidad</strong>
+              <span>Ingredientes seleccionados con criterio.</span>
+            </div>
+            <div class="panel-item">
+              <strong>Pasión</strong>
+              <span>Todo se elabora con dedicación artesanal.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">Contacta con nosotros</p>
+            <h2>Hablamos de sabores, calidad y detalle.</h2>
+            <ul>
+              <li><strong>Email:</strong> info@cvittlus.com</li>
+              <li><strong>Teléfono:</strong> +34 600 00 00 00</li>
+              <li><strong>Horario:</strong> Lunes a viernes, 9:00-18:00</li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <label>
+              Nombre
+              <input type="text" name="name" placeholder="Tu nombre" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="tu@email.com" required />
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="5" placeholder="Cuéntanos qué te gustaría probar..." required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <aside class="chatbot-widget" aria-live="polite">
+      <button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chatbot">
+        <span>💬</span>
+      </button>
+
+      <div id="chatbotContainer" class="chatbot-container hidden" aria-label="Chatbot de C-Vittlus">
+        <div class="chatbot-header">
+          <div>
+            <p class="eyebrow tiny">Asistente</p>
+            <h3>C-Vittlus</h3>
+          </div>
+          <button id="closeChatbot" aria-label="Cerrar chatbot">×</button>
+        </div>
+
+        <div id="chatbotMessages" class="chatbot-messages">
+          <div class="message bot">
+            <p>¡Hola! Puedo ayudarte con nuestros productos, stock, novedades y la historia de C-Vittlus.</p>
+          </div>
+        </div>
+
+        <div class="chatbot-input-row">
+          <input id="chatbotInput" type="text" placeholder="Pregunta por una galleta o stock..." aria-label="Escribe tu pregunta" />
+          <button id="sendMessage" class="btn btn-primary small">Enviar</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="currentYear"></span> C-Vittlus</p>
+        <p>Hecho con cariño y tradición.</p>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
