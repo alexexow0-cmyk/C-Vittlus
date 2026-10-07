@@ -72,6 +72,7 @@ function setupChatbot() {
   const messages = document.getElementById('chatbotMessages');
 
   if (!toggle || !container || !input || !sendBtn || !messages) {
+    console.warn('Chatbot: No se encontraron todos los elementos necesarios');
     return;
   }
 
@@ -108,6 +109,7 @@ function setupChatbot() {
   sendBtn.addEventListener('click', sendMessage);
   input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
+      event.preventDefault();
       sendMessage();
     }
   });

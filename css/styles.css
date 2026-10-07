@@ -78,6 +78,12 @@ textarea {
   gap: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.8;
 }
 
 .brand-mark {
@@ -144,6 +150,11 @@ textarea {
   border: none;
   cursor: pointer;
   padding: 0.35rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-toggle:hover {
+  opacity: 0.7;
 }
 
 .nav-toggle span {
@@ -152,6 +163,7 @@ textarea {
   height: 2px;
   border-radius: 999px;
   background: var(--primary-dark);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hero {
@@ -232,10 +244,19 @@ textarea {
   transform: translateY(-2px);
 }
 
+.btn:active {
+  transform: translateY(0);
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), #934d28);
   color: white;
   box-shadow: 0 12px 28px rgba(122, 61, 27, 0.24);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .btn-secondary {
@@ -312,6 +333,7 @@ textarea {
   height: 260px;
   background-size: cover;
   background-position: center;
+  background-color: var(--bg-soft);
 }
 
 .cookie-vanilla {
@@ -396,6 +418,7 @@ textarea {
   min-height: 240px;
   background-size: cover;
   background-position: center;
+  background-color: var(--bg-soft);
 }
 
 .product-body {
@@ -422,6 +445,7 @@ textarea {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary);
+  flex-shrink: 0;
 }
 
 .product-category {
@@ -563,6 +587,13 @@ textarea {
   border-radius: 12px;
   background: #fff;
   color: var(--text);
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.chatbot-input-row input::placeholder {
+  color: rgba(61, 33, 24, 0.5);
 }
 
 .contact-form input:focus,
@@ -592,6 +623,15 @@ textarea {
   box-shadow: var(--shadow);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chatbot-toggle:hover {
+  transform: scale(1.05);
+}
+
+.chatbot-toggle:active {
+  transform: scale(0.95);
 }
 
 .chatbot-container {
@@ -604,6 +644,18 @@ textarea {
   border-radius: 24px;
   box-shadow: var(--shadow);
   overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .chatbot-container.hidden {
@@ -629,6 +681,11 @@ textarea {
   color: var(--text-soft);
   font-size: 1.8rem;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.chatbot-header button:hover {
+  color: var(--text);
 }
 
 .chatbot-messages {
@@ -645,6 +702,21 @@ textarea {
   border-radius: 16px;
   padding: 0.8rem 0.9rem;
   font-size: 0.92rem;
+  animation: fadeIn 0.3s ease;
+  word-break: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.message p {
+  margin: 0;
 }
 
 .message.bot {
@@ -720,6 +792,19 @@ textarea {
     padding: 1rem 1.2rem 1.2rem;
     background: rgba(255, 250, 245, 0.98);
     border-bottom: 1px solid var(--line);
+    animation: slideDown 0.3s ease;
+    z-index: 20;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .nav-links.open {
@@ -763,5 +848,14 @@ textarea {
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .chatbot-widget {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .chatbot-container {
+    width: calc(100vw - 2rem);
   }
 }

@@ -27,14 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       const button = contactForm.querySelector('button[type="submit"]');
       const originalText = button.textContent;
-      button.textContent = 'Mensaje enviado';
+      
+      // No hay backend configurado. Mostrar mensaje claro al usuario.
+      button.textContent = 'Mensaje recibido (sin envío configurado)';
       button.disabled = true;
+
+      console.warn('NOTA: El formulario de contacto no tiene backend. Los datos no se envían a ningún servidor. Para activar esta funcionalidad, configura un servicio backend (Formspree, Netlify Forms, etc.).');
 
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
         contactForm.reset();
-      }, 1800);
+      }, 2500);
     });
   }
 });
