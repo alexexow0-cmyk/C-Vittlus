@@ -3,17 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="C-Vittlus ofrece galletas artesanales premium, de elaboración cuidadosa y sabor auténtico."
-    />
+    <meta name="description" content="C-Vittlus ofrece galletas artesanales premium, de elaboración cuidadosa y sabor auténtico." />
+    
+    <!-- CAMBIAR TU-DOMINIO.COM POR TU DOMINIO DEFINITIVO DESPUÉS DE COMPRAR EN SPACESHIP -->
+    <link rel="canonical" href="https://TU-DOMINIO.com/" />
+    <meta property="og:url" content="https://TU-DOMINIO.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="C-Vittlus | Galletas artesanales" />
+    <meta property="og:description" content="C-Vittlus ofrece galletas artesanales premium, de elaboración cuidadosa y sabor auténtico." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1499636136210-6d4eea2d469a?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:site_name" content="C-Vittlus" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="C-Vittlus | Galletas artesanales" />
+    <meta name="twitter:description" content="C-Vittlus ofrece galletas artesanales premium, de elaboración cuidadosa y sabor auténtico." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1499636136210-6d4eea2d469a?auto=format&fit=crop&w=1200&q=80" />
+    
+    <meta name="theme-color" content="#7a3d1b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
     <title>C-Vittlus | Galletas artesanales</title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -95,13 +114,13 @@
             <p class="eyebrow">Sobre nosotros</p>
             <h2>Una marca nacida del placer de cocinar bien.</h2>
             <p>
-              C-Vittlus nació de una pasión por la repostería artesanal y por la idea de que una galleta puede convertirse en una experiencia memorable. Empezamos con la intención de ofrecer algo más que un producto dulce: queríamos crear un sabor auténtico, una textura cuidada y una sensación de hogar en cada bocado.
+              C-Vittlus nació de una pasión por la repostería artesanal y por la idea de que una galleta puede convertirse en una experiencia memorable. Empezamos con la intención de ofrecer a nuestros clientes productos que reflejasen ese cuidado en cada detalle.
             </p>
             <p>
-              A lo largo del tiempo, hemos perfeccionado nuestras recetas con paciencia y criterio, combinando tradición, calidad y un enfoque muy cuidado en cada detalle. Elegimos ingredientes naturales, trabajamos en lotes pequeños y nos tomamos el tiempo necesario para que cada masa, cada horneado y cada presentación reflejen nuestro estándar.
+              A lo largo del tiempo, hemos perfeccionado nuestras recetas con paciencia y criterio, combinando tradición, calidad y un enfoque muy cuidado en cada detalle. Elegimos ingredientes de primera categoría, trabajamos con técnicas tradicionales y nos esforzamos por que cada galleta sea una pequeña obra de arte comestible.
             </p>
             <p>
-              Hoy C-Vittlus sigue creciendo con la misma intención de origen: cocinar con cariño, cuidar la materia prima y ofrecer productos que se disfrutan con calma. Nuestra historia es la de una marca que entiende que los detalles hacen la diferencia y que la verdadera calidad se reconoce en el sabor, en la consistencia y en la atención que ponemos en cada receta.
+              Hoy C-Vittlus sigue creciendo con la misma intención de origen: cocinar con cariño, cuidar la materia prima y ofrecer productos que se disfrutan con calma. Nuestra historia es la de quienes creen que las cosas bien hechas merece la pena que tarden.
             </p>
           </div>
 
@@ -134,7 +153,7 @@
             </ul>
           </div>
 
-          <form id="contactForm" class="contact-form">
+          <form id="contactForm" class="contact-form" novalidate>
             <label>
               Nombre
               <input type="text" name="name" placeholder="Tu nombre" required />
@@ -148,6 +167,9 @@
               <textarea name="message" rows="5" placeholder="Cuéntanos qué te gustaría probar..." required></textarea>
             </label>
             <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            <small style="color: var(--text-soft); font-size: 0.8rem; margin-top: 0.5rem;">
+              Nota: El formulario de demostración no envía datos. Para activar formularios funcionales, integra Formspree, Netlify Forms o tu propio backend.
+            </small>
           </form>
         </div>
       </section>
